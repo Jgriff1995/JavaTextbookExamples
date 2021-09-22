@@ -2,10 +2,15 @@ package Chapter3;
 
 import java.util.Scanner;
 
+/**
+ * @author JD 
+ * Description: Take in values for quadratic formula, output the
+ *         roots associated (if any)
+ */
 public class QuadriaticFormula {
 	public static void main(String[] args) {
 		// initialize variables and scanner
-		double a, b, c, discriminate, q1, q2;
+		double a, b, c, discrim, q1, q2;
 		int comma, comma2, root = 0;
 		String user, temp;
 		Scanner input = new Scanner(System.in);
@@ -26,10 +31,10 @@ public class QuadriaticFormula {
 
 		// calculate and check discriminate
 
-		discriminate = Math.pow(b, 2) - 4 * a * c;
-		if (discriminate > 0) {
+		discrim = Math.pow(b, 2) - 4 * a * c;
+		if (discrim > 0) {
 			root = 2;
-		} else if(discriminate == 0) {
+		} else if (discrim == 0) {
 			root = 1;
 		} else {
 			root = 0;
@@ -37,14 +42,14 @@ public class QuadriaticFormula {
 
 		// Calculate roots and output
 		if (root == 2) {
-			q1 = (-b + Math.sqrt(discriminate)) / (2 * a);
-			q2 = (-b - Math.sqrt(discriminate)) / (2 * a);
+			q1 = (-b + Math.sqrt(discrim)) / (2 * a);
+			q2 = (-b - Math.sqrt(discrim)) / (2 * a);
 			System.out.printf("The two roots of %.2f,%.2f,%.2f are %.2f and %.2f", a, b, c, q1, q2);
-		} else if(root == 1) {
-			q1 = (-b + Math.sqrt(discriminate)) / (2 * a);
+		} else if (root == 1) {
+			q1 = (-b + Math.sqrt(discrim)) / (2 * a);
 			System.out.printf("The one root of %.2f,%.2f,%.2f is %.2f", a, b, c, q1);
 		} else {
-			System.out.printf("There are no real roots of %.2f, %.2f, %.2f." , a,b,c);
+			System.out.printf("There are no real roots of %.2f, %.2f, %.2f.", a, b, c);
 		}
 
 	}
