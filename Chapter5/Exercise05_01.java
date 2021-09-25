@@ -55,7 +55,7 @@ public class Exercise05_01 {
 			System.out.printf("The total is %.1f\n", totalSum);
 			System.out.printf("the average is %.2f\n", average);
 		} else {
-			System.out.println("Program terminated with no inputs");
+			System.out.println("No numbers are entered except 0");
 		}
 	}
 
