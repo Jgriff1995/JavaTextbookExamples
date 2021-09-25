@@ -1,6 +1,6 @@
 package Chapter3;
 /** 
- * @author James
+ * @author JD
  * Description: Repeat additions, genereate ten random addition questions for two integers between
  *  1 and 15. Display the correct count and incorrect count 
  */
